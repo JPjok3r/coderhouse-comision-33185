@@ -10,6 +10,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,300;0,500;1,200;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin");
+@font-face {
+    font-family: 'pokemonFont';
+    src: url('../fonts/PokemonSolid.ttf');
+}
+@font-face {
+    font-family: 'adidasFont';
+    src: url('../fonts/adidasFont.otf');
+}
 
 * {
     margin: 0;
@@ -19,7 +27,7 @@
 
 body {
     font-family: "Exo", "Cabin", sans-serif;
-    background-color: rgb(170, 170, 170);
+    background-color: rgb(218, 218, 218);
 }
 
 /*header*/
@@ -44,6 +52,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
 
 header nav {
@@ -128,12 +137,12 @@ header nav ul .dropdown .dropdownContent li {
     text-align: left;
 }
 
-header nav ul .dropdown .dropdownContent li a img{
+header nav ul .dropdown .dropdownContent li a img {
     width: 100px;
     height: 100px;
 }
 
-header nav ul .dropdown:hover > .dropdownContent {
+header nav ul .dropdown:hover>.dropdownContent {
     display: flex;
     justify-content: space-around;
     background-color: #1e152a;
@@ -169,11 +178,50 @@ header nav ul .dropdown:hover > .dropdownContent {
 
 .marcas h2 {
     padding: 10px;
+    margin-bottom: 15px;
     font-size: 25px;
 }
 
+.marcas .galeriaMarcas .adidasImg,
+.marcas .galeriaMarcas .pumaImg,
+.marcas .galeriaMarcas .nikeImg,
+.marcas .galeriaMarcas .underArmourImg,
+.marcas .galeriaMarcas .topperImg {
+    transition: 1s;
+
+}
+
+.marcas .galeriaMarcas .adidasImg img:hover {
+    content: url("../img/adidasBlanco.png");
+}
+
+.marcas .galeriaMarcas .pumaImg img:hover {
+    content: url("../img/pumaBlanco.png");
+}
+
+.marcas .galeriaMarcas .nikeImg img:hover {
+    content: url("../img/nikeBlanco.png");
+}
+
+.marcas .galeriaMarcas .underArmourImg img:hover {
+    content: url("../img/underBlanco.png");
+}
+
+.marcas .galeriaMarcas .topperImg img:hover {
+    content: url("../img/topperBlanco.png");
+}
+
+.marcas .galeriaMarcas .adidasImg:hover,
+.marcas .galeriaMarcas .pumaImg:hover,
+.marcas .galeriaMarcas .nikeImg:hover,
+.marcas .galeriaMarcas .underArmourImg:hover,
+.marcas .galeriaMarcas .topperImg:hover {
+    transform: scale(1.25);
+    transition: 2s;
+}
+
 .hero {
-    background-image: url("../img/bannerMain.jpgss");
+    background-image: url("../img/bannerMain.jpg");
     width: 100%;
     height: 450px;
     background-position: center;
@@ -237,6 +285,69 @@ header nav ul .dropdown:hover > .dropdownContent {
     text-align: left;
 }
 
+.novedades {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.novedades a img {
+    width: 350px;
+    height: 250px;
+    transition: 2s;
+}
+
+.novedades a img:hover {
+    transform: scale(1.15);
+    opacity: 80%;
+    transition: 2s;
+}
+
+.novedades .contenedorImgTexto {
+    position: relative;
+}
+
+.novedades .contenedorImgTexto .imagenNov {
+    display: block;
+}
+
+.novedades .contenedorImgTexto .contenedorTexto {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    max-width: 200px;
+    opacity: 0;
+    transition: 1.5s ease;
+    background-color: #443c2a;
+}
+
+.novedades .contenedorImgTexto .contenedorTexto .descImg {
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.novedades .contenedorImgTexto .contenedorTexto .fontPoke{
+    font-family: 'pokemonFont';
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.novedades .contenedorImgTexto .contenedorTexto .fontAdi{
+    font-family: 'adidasFont';
+    font-weight: bold;
+    color: #ffffff;
+}
+
 .nuevaTemporada {
     padding-top: 20px;
     padding-bottom: 30px;
@@ -245,6 +356,20 @@ header nav ul .dropdown:hover > .dropdownContent {
 
 .nuevaTemporada h2 {
     padding-bottom: 30px;
+}
+
+.novedades .contenedorImgTexto:hover .contenedorTexto{
+    opacity: 60%;
+    max-width: 200px;
+}
+
+.novedades .contenedorImgTexto:hover .textoRoca{
+    opacity: 70%;
+    max-width: 200px;
+}
+
+.novedades .contenedorImgTexto:hover .contenedorTexto .descImg{
+    opacity: 1;
 }
 
 .nuevaTemporada .galeriaNuevaTemp,
