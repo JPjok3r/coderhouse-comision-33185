@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon">
     <title>Indumentaria Adultos - SportShop</title>
 </head>
+
 <body>
     <header>
+        <input type="checkbox" id="menuBtn" class="menuBtn">
+        <label for="menuBtn" class="checkBtn">
+            <img src="../img/menu.png" alt="menu">
+        </label>
         <a href="../index.html" class="logo">
             <img src="../img/logo/originalLogo.png" alt="Logo">
         </a>
         <nav>
             <ul>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./adultos.html">Adultos</a></li>
                 <li><a href="./ninios.html">Niños</a></li>
                 <li class="dropdown">Marcas
@@ -36,106 +45,159 @@
             <img src="../img/busqueda.png" alt="Buscar">
         </div>
     </header>
-    <main class="adultoHombre">
-        <section class="opciones">
-            <div class="categoria">
-                <h2>CATEGORÍAS</h2>
-                <ul>
-                    <li><a href="">Accesorios</a></li>
-                    <li><a href="">Indumentaria</a></li>
-                    <li><a href="">Zapatillas</a></li>
-                </ul>
-            </div>
-            <div class="genero">
-                <h2>GÉNERO</h2>
-                <ul>
-                    <li><a href="">Hombres</a></li>
-                    <li><a href="">Mujeres</a></li>
-                </ul>
-            </div>
-            <div class="colores">
-                <h2>COLORES</h2>
-                <a href=""><button class="negro"></button></a>
-                <a href=""><button class="blanco"></button></a>
-                <a href=""><button class="rojo"></button></a>
-                <a href=""><button class="cian"></button></a>
-                <a href=""><button class="naranja"></button></a>
-                <a href=""><button class="plomo"></button></a>
-            </div>
-            <div class="tallas">
-                <h2>TALLAS</h2>
-                <div><a href="">S</a></div>
-                <div><a href="">M</a></div>
-                <div><a href="">L</a></div>
-                <div><a href="">XL</a></div>
-            </div>
-        </section>
-        <section class="contenido">
-            <h2>Productos para adultos</h2>
-            <div class="galeriaProductos">
-                <div>
-                    <img src="../img/indumentaria/chaquetaMujer1.png" alt="">
-                    <p class="descripcion">Lorem ipsum dolor sit.</p>
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>PRECIO</p>
+    <main>
+        <section class="opcionesDos">
+            <div class="estiloBotones">
+                <!-- Example single danger button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        CATEGORÍAS
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                        <li><a class="dropdown-item" href="#">Indumentaria</a></li>
+                        <li><a class="dropdown-item" href="#">Zapatillas</a></li>
+                    </ul>
                 </div>
-                <div>
-                    <img src="../img/indumentaria/gorraUnder1.png" alt="">
-                    <p class="descripcion">Lorem ipsum dolor sit.</p>
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>PRECIO</p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        GÉNERO
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Hombres</a></li>
+                        <li><a class="dropdown-item" href="#">Mujeres</a></li>
+                    </ul>
                 </div>
-                <div>
-                    <img src="../img/indumentaria/poleraHombre2.png" alt="">
-                    <p class="descripcion">Lorem ipsum dolor sit.</p>
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>PRECIO</p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        COLORES
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><button class="negro"></button></a></li>
+                        <li><a class="dropdown-item" href="#"><button class="blanco"></button></li>
+                        <li><a class="dropdown-item" href="#"><button class="rojo"></button></a></li>
+                        <li><a class="dropdown-item" href="#"><button class="cian"></button></a></li>
+                        <li><a class="dropdown-item" href="#"><button class="naranja"></button></a></li>
+                        <li><a class="dropdown-item" href="#"><button class="plomo"></button></a></li>
+                    </ul>
                 </div>
-                <div>
-                    <img src="../img/indumentaria/zapatilla3.png" alt="">
-                    <p class="descripcion">Lorem ipsum dolor sit.</p>
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>PRECIO</p>
-                </div>
-                <div>
-                    <img src="../img/indumentaria/zapatilla4.png" alt="">
-                    <p class="descripcion">Lorem ipsum dolor sit.</p>
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>PRECIO</p>
-                </div>
-                <div>
-                    <img src="../img/indumentaria/chaquetaMujer1.png" alt="">
-                    <p class="descripcion">Lorem ipsum dolor sit.</p>
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>PRECIO</p>
-                </div>
-                <div>
-                    <img src="../img/indumentaria/gorraUnder1.png" alt="">
-                    <p class="descripcion">Lorem ipsum dolor sit.</p>
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>PRECIO</p>
-                </div>
-                <div>
-                    <img src="../img/indumentaria/poleraHombre2.png" alt="">
-                    <p class="descripcion">Lorem ipsum dolor sit.</p>
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>PRECIO</p>
-                </div>
-                <div>
-                    <img src="../img/indumentaria/zapatilla3.png" alt="">
-                    <p class="descripcion">Lorem ipsum dolor sit.</p>
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>PRECIO</p>
-                </div>
-                <div>
-                    <img src="../img/indumentaria/zapatilla4.png" alt="">
-                    <p class="descripcion">Lorem ipsum dolor sit.</p>
-                    <h2>Lorem ipsum dolor sit.</h2>
-                    <p>PRECIO</p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        TALLAS
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Small (S)</a></li>
+                        <li><a class="dropdown-item" href="#">Medium (M)</a></li>
+                        <li><a class="dropdown-item" href="#">Large (L)</a></li>
+                        <li><a class="dropdown-item" href="#">Extra-Large (XL)</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
-        
+        <div class="adultoHombre">
+            <section class="opciones">
+                <div class="categoria">
+                    <h2>CATEGORÍAS</h2>
+                    <ul>
+                        <li><a href="">Accesorios</a></li>
+                        <li><a href="">Indumentaria</a></li>
+                        <li><a href="">Zapatillas</a></li>
+                    </ul>
+                </div>
+                <div class="genero">
+                    <h2>GÉNERO</h2>
+                    <ul>
+                        <li><a href="">Hombres</a></li>
+                        <li><a href="">Mujeres</a></li>
+                    </ul>
+                </div>
+                <div class="colores">
+                    <h2>COLORES</h2>
+                    <a href=""><button class="negro"></button></a>
+                    <a href=""><button class="blanco"></button></a>
+                    <a href=""><button class="rojo"></button></a>
+                    <a href=""><button class="cian"></button></a>
+                    <a href=""><button class="naranja"></button></a>
+                    <a href=""><button class="plomo"></button></a>
+                </div>
+                <div class="tallas">
+                    <h2>TALLAS</h2>
+                    <div><a href="">S</a></div>
+                    <div><a href="">M</a></div>
+                    <div><a href="">L</a></div>
+                    <div><a href="">XL</a></div>
+                </div>
+            </section>
+            <section class="contenido">
+                <h2>Productos para adultos</h2>
+                <div class="galeriaProductos">
+                    <div>
+                        <img src="../img/indumentaria/chaquetaMujer1.png" alt="">
+                        <p class="descripcion">Lorem ipsum dolor sit.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>PRECIO</p>
+                    </div>
+                    <div>
+                        <img src="../img/indumentaria/gorraUnder1.png" alt="">
+                        <p class="descripcion">Lorem ipsum dolor sit.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>PRECIO</p>
+                    </div>
+                    <div>
+                        <img src="../img/indumentaria/poleraHombre2.png" alt="">
+                        <p class="descripcion">Lorem ipsum dolor sit.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>PRECIO</p>
+                    </div>
+                    <div>
+                        <img src="../img/indumentaria/zapatilla3.png" alt="">
+                        <p class="descripcion">Lorem ipsum dolor sit.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>PRECIO</p>
+                    </div>
+                    <div>
+                        <img src="../img/indumentaria/zapatilla4.png" alt="">
+                        <p class="descripcion">Lorem ipsum dolor sit.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>PRECIO</p>
+                    </div>
+                    <div>
+                        <img src="../img/indumentaria/chaquetaMujer1.png" alt="">
+                        <p class="descripcion">Lorem ipsum dolor sit.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>PRECIO</p>
+                    </div>
+                    <div>
+                        <img src="../img/indumentaria/gorraUnder1.png" alt="">
+                        <p class="descripcion">Lorem ipsum dolor sit.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>PRECIO</p>
+                    </div>
+                    <div>
+                        <img src="../img/indumentaria/poleraHombre2.png" alt="">
+                        <p class="descripcion">Lorem ipsum dolor sit.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>PRECIO</p>
+                    </div>
+                    <div>
+                        <img src="../img/indumentaria/zapatilla3.png" alt="">
+                        <p class="descripcion">Lorem ipsum dolor sit.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>PRECIO</p>
+                    </div>
+                    <div>
+                        <img src="../img/indumentaria/zapatilla4.png" alt="">
+                        <p class="descripcion">Lorem ipsum dolor sit.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>PRECIO</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="redesSociales">
@@ -146,11 +208,16 @@
         <div class="enlaces">
             <a href="./paginaConstruccion.html">Políticas de Privacidad</a>
             <a href="./paginaConstruccion.html">Términos y Condiciones</a>
-            <a href="./paginaConstruccion.html">Guía de Tallas</a>
+            <a href="./paginaConstruccion.html" class="tallasQuitar">Guía de Tallas</a>
             <a href="./paginaConstruccion.html">Quienes Somos</a>
             <a href="./paginaConstruccion.html">Sucursales</a>
         </div>
         <p class="derechos">© SportShop 2023. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -10,10 +10,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,300;0,500;1,200;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin");
+
 @font-face {
     font-family: 'pokemonFont';
     src: url('../fonts/PokemonSolid.ttf');
 }
+
 @font-face {
     font-family: 'adidasFont';
     src: url('../fonts/adidasFont.otf');
@@ -56,7 +58,7 @@ header {
 }
 
 header nav {
-    width: 50%;
+    width: 65%;
     align-self: end;
     display: flex;
     justify-content: space-around;
@@ -151,9 +153,33 @@ header nav ul .dropdown:hover>.dropdownContent {
     transition: 500ms;
 }
 
+header label img{
+    width: 40px;
+    height: 40px;
+}
+
+header .checkBtn{
+    cursor: pointer;
+    display: none;
+}
+
+header .menuBtn{
+    display: none;
+}
+
 /*header*/
 
 /*main*/
+.productoNombre {
+    font-size: 24px;
+    padding: 2px;
+}
+
+.precioProducto{
+    font-size: 16px;
+    
+}
+
 .marcas,
 .productos,
 .nuevaTemporada {
@@ -168,6 +194,8 @@ header nav ul .dropdown:hover>.dropdownContent {
 .marcas .galeriaMarcas {
     display: flex;
     justify-content: space-around;
+    margin: 10px;
+    flex-wrap: wrap;
 }
 
 .marcas {
@@ -220,10 +248,10 @@ header nav ul .dropdown:hover>.dropdownContent {
     transition: 2s;
 }
 
-.hero {
+/* .hero {
     background-image: url("../img/bannerMain.jpg");
     width: 100%;
-    height: 450px;
+    height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,12 +261,17 @@ header nav ul .dropdown:hover>.dropdownContent {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
+} */
 
-.hero div p {
+.hero .carousel-inner img{
+    width: 90%;
+    height: 450px;
+} 
+
+/* .hero div p {
     width: 300px;
     justify-self: center;
-}
+} */
 
 .fixedContact {
     position: fixed;
@@ -263,20 +296,28 @@ header nav ul .dropdown:hover>.dropdownContent {
 .productos .mostradorProductos {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .productos .mostradorProductos div {
-    border: 2px solid gray;
-    background-color: #ffffff;
-    width: 165px;
-    height: 350px;
+    cursor: pointer;
+    background-color: #fffafa;
+    width: 200px;
+    height: 380px;
     text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.productos .mostradorProductos div:hover {
+    border: 1.1px solid;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: rgba(95, 39, 199, 0.4) 5px 5px, rgba(95, 39, 199, 0.3) 10px 10px, rgba(95, 39, 199, 0.2) 15px 15px, rgba(95, 39, 199, 0.1) 20px 20px, rgba(95, 39, 199, 0.05) 25px 25px;
 }
 
 .productos .mostradorProductos div img {
     width: 150px;
     height: 170px;
-    border: 1px solid gray;
     padding: 2px;
 }
 
@@ -289,6 +330,7 @@ header nav ul .dropdown:hover>.dropdownContent {
     display: flex;
     justify-content: space-around;
     padding: 50px 0;
+    flex-wrap: wrap;
 }
 
 .novedades a img {
@@ -305,6 +347,7 @@ header nav ul .dropdown:hover>.dropdownContent {
 
 .novedades .contenedorImgTexto {
     position: relative;
+    margin: 10px;
 }
 
 .novedades .contenedorImgTexto .imagenNov {
@@ -336,13 +379,13 @@ header nav ul .dropdown:hover>.dropdownContent {
     text-align: center;
 }
 
-.novedades .contenedorImgTexto .contenedorTexto .fontPoke{
+.novedades .contenedorImgTexto .contenedorTexto .fontPoke {
     font-family: 'pokemonFont';
     font-weight: bold;
     color: #ffffff;
 }
 
-.novedades .contenedorImgTexto .contenedorTexto .fontAdi{
+.novedades .contenedorImgTexto .contenedorTexto .fontAdi {
     font-family: 'adidasFont';
     font-weight: bold;
     color: #ffffff;
@@ -351,39 +394,57 @@ header nav ul .dropdown:hover>.dropdownContent {
 .nuevaTemporada {
     padding-top: 20px;
     padding-bottom: 30px;
-    background-color: #1b8996;
 }
 
 .nuevaTemporada h2 {
     padding-bottom: 30px;
 }
 
-.novedades .contenedorImgTexto:hover .contenedorTexto{
+.novedades .contenedorImgTexto:hover .contenedorTexto {
     opacity: 60%;
     max-width: 200px;
 }
 
-.novedades .contenedorImgTexto:hover .textoRoca{
+.novedades .contenedorImgTexto:hover .textoRoca {
     opacity: 70%;
     max-width: 200px;
 }
 
-.novedades .contenedorImgTexto:hover .contenedorTexto .descImg{
+.novedades .contenedorImgTexto:hover .contenedorTexto .descImg {
     opacity: 1;
 }
 
-.nuevaTemporada .galeriaNuevaTemp,
+.nuevaTemporada .galeriaNuevaTemp {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .contenido .galeriaProductos {
     display: flex;
     justify-content: space-around;
 }
 
-.nuevaTemporada .galeriaNuevaTemp div,
+.nuevaTemporada .galeriaNuevaTemp div {
+    background-color: #fffafa;
+    width: 200px;
+    height: 380px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.nuevaTemporada .galeriaNuevaTemp div:hover{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
 .contenido .galeriaProductos div {
     border: 2px solid gray;
-    background-color: #ffffff;
-    width: 165px;
-    height: 350px;
+    background-color: #fffafa;
+    width: 200px;
+    height: 380px;
+    margin: 10px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -391,8 +452,12 @@ header nav ul .dropdown:hover>.dropdownContent {
 .contenido .galeriaProductos div img {
     width: 150px;
     height: 170px;
-    border: 1px solid gray;
     padding: 2px;
+    transition: 750ms;
+}
+
+.nuevaTemporada .galeriaNuevaTemp div img:hover {
+    transform: scale(1.25);
 }
 
 .nuevaTemporada .galeriaNuevaTemp div .descripcion,
@@ -419,6 +484,17 @@ header nav ul .dropdown:hover>.dropdownContent {
     margin: 30px;
 }
 
+.adultoHombre .contenido .galeriaProductos div h2,
+.ninios .contenido .galeriaProductos div h2{
+    font-size: 25px;
+}
+
+.adultoHombre .contenido .galeriaProductos div:hover,
+.ninios .contenido .galeriaProductos div:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+
 .adultoHombre,
 .ninios {
     display: inline-flex;
@@ -438,6 +514,21 @@ header nav ul .dropdown:hover>.dropdownContent {
     width: 70%;
 }
 
+.opcionesDos{
+    display: none;
+}
+
+.opcionesDos .estiloBotones{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #eeece2;
+}
+
+.opcionesDos .estiloBotones .btn-group{
+    margin: 5px 10px;
+}
+
 .opciones {
     padding-left: 15px;
     margin-top: 30px;
@@ -452,33 +543,34 @@ header nav ul .dropdown:hover>.dropdownContent {
     margin: 10px;
 }
 
-.opciones .colores a button {
+.opciones .colores a button,
+.opcionesDos .estiloBotones div ul li a button {
     width: 50px;
     height: 50px;
     border-radius: 25px;
 }
 
-.opciones .colores a .negro {
+.opciones .colores a .negro, .opcionesDos .estiloBotones div ul li a .negro {
     background-color: black;
 }
 
-.opciones .colores a .blanco {
+.opciones .colores a .blanco, .opcionesDos .estiloBotones div ul li a .blanco {
     background-color: white;
 }
 
-.opciones .colores a .rojo {
+.opciones .colores a .rojo, .opcionesDos .estiloBotones div ul li a .rojo {
     background-color: rgb(172, 5, 5);
 }
 
-.opciones .colores a .cian {
+.opciones .colores a .cian, .opcionesDos .estiloBotones div ul li a .cian {
     background-color: cyan;
 }
 
-.opciones .colores a .naranja {
-    background-color: rgb(211, 146, 26);
+.opciones .colores a .naranja, .opcionesDos .estiloBotones div ul li a .naranja {
+    background-color: orange;
 }
 
-.opciones .colores a .plomo {
+.opciones .colores a .plomo, .opcionesDos .estiloBotones div ul li a .plomo {
     background-color: gray;
 }
 
@@ -585,11 +677,13 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 footer .redesSociales img {
     width: 50px;
     height: 50px;
+    line-height: 78px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -601,12 +695,266 @@ footer p {
 }
 
 footer .enlaces a {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 13px;
+    padding-right: 13px;
+    position: relative;
+}
+
+footer .enlaces a::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    background-color: #ffffff;
+    transform-origin: center;
+    transition: transform 250ms, opacity 500ms;
+}
+
+footer .enlaces a:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
 }
 
 footer .derechos {
     justify-self: self-end;
+}
+
+/*! MEDIAS Query*/
+
+@media screen and (max-width:946px) {
+    header{
+        display: flex;
+        justify-content: space-evenly
+    }
+
+    header .adminIconos{
+        width: 20%;
+    }
+
+    header .checkBtn{
+        display: block;
+        margin-left: 30px;
+    }
+
+    header .logo{
+        order: 0;
+        margin-left: 30%;
+    }
+    
+    header nav ul{
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        top: 130px;
+        left: -100%;
+        text-align: center;
+        transition: 500ms;
+        background-color: #1e152a;
+    }
+
+    header nav ul .dropdown{
+        display: none;
+    }
+
+    header nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+
+    header nav ul li a{
+        font-size: 22px;
+    }
+
+    header nav ul li:hover{
+        background-color: #00adb5;
+        color: #fffafa;
+    }
+
+    header #menuBtn:checked ~ nav ul{
+        left: 0;
+    }
+
+    .opcionesDos{
+        display: block;
+    }
+
+    .opciones{
+        display: none;
+    }
+
+    .adultoHombre .contenido,
+    .ninios .contenido{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:490){
+    header .logo{
+        order: -1;
+        margin-left: 100px;
+        left: -20px;
+    }
+
+    header .logo img{
+        width: 50px;
+        height: 50px;
+        left: 0;
+    }
+
+    header .checkBtn{
+        width: 50px;
+    }
+
+    header nav{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1020px){
+    /** MAIN*/
+    .marcas .galeriaMarcas img{
+        width: 120px;
+        height: 120px;
+        margin: 8px 5px;
+    }
+    /** FIN MAIN*/
+}
+
+@media screen and (max-width:830px){
+    /** MAIN*/
+    .hero .carousel-inner div img{
+        width: 100%;
+        height: 300px;
+    }
+
+    .marcas .galeriaMarcas img{
+        width: 100px;
+        height: 100px;
+        margin: 8px 5px;
+    }
+
+    .adultoHombre .contenido .galeriaProductos div h2,
+    .ninios .contenido .galeriaProductos div h2{
+        font-size: 22px;
+    }
+
+    /** FIN MAIN*/
+    /** FOOTER*/
+    footer {
+        background-color: #1e152a;
+        text-align: center;
+        height: 250px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    footer .redesSociales{
+        order: 3;
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 15px 0;
+    }
+
+    footer .enlaces{
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    footer .derechos{
+        align-self: flex-end;
+    }
+
+    footer .redesSociales img{
+        margin: 5px 0;
+    }
+
+    footer .enlaces a{
+        padding: 3px 0;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .novedades a img{
+        width: 250px;
+        height: 250px;
+    }
+
+    footer .derechos{
+        left: 0%;
+    }
+}
+
+@media screen and (max-width:660px){
+    .novedades img{
+        width: 100%;
+        height: auto;
+    }
+
+    footer{
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px 50px;
+
+        grid-template-areas: 
+        "footerSocial"
+        "footerLinks"
+        "footerDer";
+    }
+
+    footer .redesSociales{
+        grid-area: footerSocial;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    footer .redesSociales a img{
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .enlaces{
+        grid-area: footerLinks;
+        display: flex;
+        height: 100px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: -5px;
+    }
+
+    footer .enlaces a{
+        position: relative;
+        margin: 5px 10px;
+        float: right;
+    }
+
+    footer .enlaces .tallasQuitar{
+        display: none;
+    }
+
+    footer .derechos{
+        grid-area: footerDer;
+        position: absolute;
+        text-align: center;
+        left: 10%;
+    }
 }
 
 /*footer*/
