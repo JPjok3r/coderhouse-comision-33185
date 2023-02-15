@@ -1,0 +1,25 @@
+{
+  "name": "comision-33185",
+  "version": "1.0.0",
+  "description": "Proyecto para desarrollo web de CoderHouse",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPjok3r/coderhouse-comision-33185.git"
+  },
+  "author": "Juan Pablo Saavedra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JPjok3r/coderhouse-comision-33185/issues"
+  },
+  "homepage": "https://github.com/JPjok3r/coderhouse-comision-33185#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}

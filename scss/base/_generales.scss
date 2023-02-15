@@ -1,0 +1,73 @@
+// @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,300;0,500;1,200;1,400&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Cabin");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: map-get($fonts , estiloExo ), map-get($fonts , estiloCabin ), sans-serif;
+    position: relative;
+    padding-bottom: 280px;
+    min-height: 100vh;
+    background: nth($colores , 7 );
+    background: linear-gradient(180deg, nth($colores, 7) 0%, nth($colores, 5) 50%, nth($colores, 2) 100%);
+}
+
+.opciones{
+    .colores{
+        a{
+            .negro{
+                background-color: black;
+            }
+            .blanco{
+                background-color: white;
+            }
+            .rojo{
+                background-color: red;
+            }
+            .cian{
+                background-color: cyan;
+            }
+            .naranja{
+                background-color: orange;
+            }
+            .plomo{
+                background-color: gray;
+            }
+        }
+    }
+}
+
+.opcionesDos{
+    .estiloBotones{
+        div{
+            ul{
+                li{
+                    a{
+                        .negro{
+                            background-color: black;
+                        }
+                        .blanco{
+                            background-color: white;
+                        }
+                        .rojo{
+                            background-color: red;
+                        }
+                        .cian{
+                            background-color: cyan;
+                        }
+                        .naranja{
+                            background-color: orange;
+                        }
+                        .plomo{
+                            background-color: gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

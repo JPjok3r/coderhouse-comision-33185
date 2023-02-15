@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,300;0,500;1,200;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin");
+
+@font-face {
+    font-family: 'pokemonFont';
+    src: url('../fonts/PokemonSolid.ttf');
+}
+
+@font-face {
+    font-family: 'adidasFont';
+    src: url('../fonts/adidasFont.otf');
+}
+
+$fonts:(
+    estiloExo: 'Exo',
+    estiloCabin: 'Cabin',
+    estiloPokemon: 'pokemonFont',
+    estiloAdidas: 'adidasFont',
+);
+
+
+$colores:
+    #000000, //fontblack        1 nth($colores, 1)
+    #212b38, //fondoheader      2 nth($colores, 2)
+    #37465b, //secundario       3 nth($colores, 3)
+    #1b8996, //hoveritemsmenu   4 nth($colores, 4)
+    #08c6ab, //primario         5 nth($colores, 5)
+    #5affe7, //cuarto           6 nth($colores, 6)
+    #726eff, //terciario        7 nth($colores, 7)
+    #ffffff, //fontprimario     8 nth($colores, 8)
+    #fffafa; //otroscajas       9 nth($colores, 9)
+
+%cajasProductos{
+    cursor: pointer;
+    background-color: nth($colores, 9);
+    width: 300px;
+    height: 380px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+%descripcionCajasProductos{
+    width: auto;
+    text-align: left;
+}
+
+%imagenesCajasProductos{
+    width: 150px;
+    height: 170px;
+    padding: 2px;
+}
+
+%flexContenedores{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+%espaciosCajasContenedoras{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+@mixin flex ($direction, $justify, $align, $wrap){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}

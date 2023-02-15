@@ -1,0 +1,400 @@
+// main index
+.hero{
+    .carousel-inner{
+        img{
+            width: 90%;
+            height: 450px;
+        }
+    }
+    .fontsCarrusel{
+        color: nth($colores, 1);
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.marcas{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    h2{
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: 25px;
+    }
+    .galeriaMarcas{
+        @extend %flexContenedores;
+        margin: 10px;
+        a{
+            transition: 1s;
+            img{
+                width: 200px;
+                height: 150px;
+            }
+            &:hover{
+                transform: scale(1.25);
+                transition: 2s;
+            }
+        }
+        .adidasImg{
+            img{
+                &:hover{
+                    content: url("../img/adidasBlanco.png");
+                }
+            }
+        }
+        .pumaImg{
+            img{
+                &:hover{
+                    content: url("../img/pumaBlanco.png");
+                }
+            }
+        }
+        .nikeImg{
+            img{
+                &:hover{
+                    content: url("../img/nikeBlanco.png");
+                }
+            }
+        }
+        .underArmourImg{
+            img{
+                &:hover{
+                    content: url("../img/underBlanco.png");
+                }
+            }
+        }
+        .topperImg{
+            img{
+                &:hover{
+                    content: url("../img/topperBlanco.png");
+                }
+            }
+        }
+    }
+}
+
+.productos{
+    @extend %espaciosCajasContenedoras;
+    h2{
+        padding-bottom: 30px
+    }
+    .mostradorProductos{
+        @extend %flexContenedores;
+        div{
+            @extend %cajasProductos;
+            transition: 300ms;
+            img{
+                @extend %imagenesCajasProductos;
+            }
+            .descripcion{
+                @extend %descripcionCajasProductos;
+            }
+            &:hover{
+                border: 1.1px solid;
+                box-shadow: rgba(95, 39, 199, 0.4) 5px 5px, rgba(95, 39, 199, 0.3) 10px 10px, rgba(95, 39, 199, 0.2) 15px 15px, rgba(95, 39, 199, 0.1) 20px 20px, rgba(95, 39, 199, 0.05) 25px 25px;
+                transition: 300ms;
+            }
+        }
+    }
+}
+
+.novedades{
+    @extend %flexContenedores;
+    padding: 50px 0;
+    .contenedorImgTexto{
+        position: relative;
+        margin: 10px;
+        a{
+            .imagenNov{
+                width: 350px;
+                height: 250px;
+                transition: 2s;
+                display: block;
+                &:hover{
+                    transform: scale(1.15);
+                    opacity: 80%;
+                    transition: 2s;
+                }
+            }
+        }
+        .contenedorTexto{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            max-width: 200px;
+            opacity: 0;
+            transition: 1.5s ease;
+            background-color: nth($colores, 3);
+            .descImg{
+                color: nth($colores, 8);
+                font-size: 24px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            .fontPoke{
+                font-family: map-get($fonts, estiloPokemon);
+                font-weight: bold;
+                color: nth($colores, 8 );
+            }
+            .fontAdi{
+                font-family: map-get($fonts, estiloAdidas);
+                font-weight: bold;
+                color: nth($colores, 8);
+            }
+        }
+        &:hover{
+            .contenedorTexto{
+                opacity: 60%;
+                max-width: 200px;
+                .descImg{
+                    opacity: 1;
+                }
+            }
+            .textoRoca{
+                opacity: 70%;
+                max-width: 200px;
+            }
+        }
+    }
+}
+
+.nuevaTemporada{
+    @extend %espaciosCajasContenedoras;
+    h2{
+        padding-bottom: 30px;
+    }
+    .galeriaNuevaTemp{
+        @extend %flexContenedores;
+        div{
+            @extend %cajasProductos;
+            img{
+                @extend %imagenesCajasProductos;
+                transition: 750ms;
+                &:hover{
+                    transform: scale(1.15);
+                }
+            }
+            .descripcion{
+                @extend %descripcionCajasProductos;
+            }
+            &:hover{
+                box-shadow: rgba(221, 235, 235, 0.6) 0px 4px 6px 0px, rgba(248, 252, 252, 0.5) 0px 4px 16px 0px;
+            }
+        }
+    }
+}
+
+.fixedContact{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    .whatsapp{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+//fin main index
+
+//main adultos, ninios y ofertas
+.opcionesDos{
+    display: none;
+    .estiloBotones{
+        @include flex (row, center, null, wrap);
+        background-color: nth($colores, 7);
+        .btn-group{
+            margin: 5px 10px;
+        }
+        div{
+            ul{
+                li{
+                    a{
+                        button{
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 25px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+.adulto, .ninios{
+    display: inline-flex;
+    width: 100%;
+    height: fit-content;
+    .opciones{
+        width: 30%;
+        height: fit-content;
+        color: nth($colores, 8);
+        padding-left: 15px;
+        margin-top: 30px;
+        .opcionesListas{
+            
+            ul{
+                list-style: none;
+                li{
+                    margin: 10px;
+                    a{
+                        text-decoration: none;
+                        color: nth($colores, 2);
+                        &:hover{
+                            color: nth($colores, 8);
+                        }
+                    }
+                }
+            }
+        }
+        .colores{
+
+            a{
+
+                button{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 25px;
+                }
+            }
+        }
+        .tallas{
+
+            div{
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                border: 1px solid;
+                border-color: nth($colores, 3);
+                text-align: center;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                background-color: nth($colores, 3);
+                a{
+                    text-decoration: none;
+                    color: nth($colores, 2);
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: nth($colores, 9);
+                }
+                &:hover{
+                    background: rgb(114,110,255);
+                    background: radial-gradient(circle, rgba(33,43,56,1) 0%, rgba(8,198,171,1) 40%, rgba(114,110,255,1) 90%);
+                }
+            }
+        }
+    }
+    .contenido{
+        width: 70%;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .galeriaProductos{
+            @include flex (row, space-around, null, wrap);
+            padding-top: 40px;
+            div{
+                @extend %cajasProductos;
+                cursor: pointer;
+                img{
+                    @extend %imagenesCajasProductos;
+                    transition: 600ms;
+                    &:hover{
+                        transform: scale(1.25);
+                    }
+                }
+                .descripcion{
+                    @extend %descripcionCajasProductos;
+                }
+                h2{
+                    font-size: 25px;
+                }
+                &:hover{
+                    box-shadow: rgba(221, 235, 235, 0.6) 0px 4px 6px 0px, rgba(248, 252, 252, 0.5) 0px 4px 16px 0px;
+                }
+            }
+        }
+    }
+}
+//fin main adultos, ninios y ofertas
+
+//main de nosotros y pagina en construccion
+.acerca{
+    background-image: url("../img/banerNos.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    .descripcionNos{
+        @include flex (row, space-around, center, wrap);
+        text-align: center;
+        width: 100%;
+        div{
+            margin-top: 50px;
+            width: 500px;
+            height: 40vh;
+            margin: 50px 0;
+            h1{
+                margin-top: 30px;
+                font-size: 40px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+        iframe{
+            margin-top: 45px;
+            width: 600px;
+            height: 60vh;
+        }
+    }
+}
+
+.fondo{
+    background-image: url("../img/builting.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    .elementos{
+        width: 50%;
+        height: 90%;
+        @include flex (column, flex-end, center, null);
+        h2{
+            margin-top: 30px;
+        }
+        p{
+            margin-top: 30px;
+        }
+        a{
+            margin-top: 30px;
+            button{
+                padding: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                color: nth($colores, 8);
+                border: 1px solid nth($colores, 7);
+                background-color: nth($colores, 7);
+                &:hover{
+                    background-color: nth($colores, 5);
+                }
+            }
+        }
+        img{
+            margin-top: 30px;
+        }
+    }
+}
+//main de nosotros y pagina en construccion

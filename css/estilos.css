@@ -1,0 +1,634 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,300;0,500;1,200;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin");
+@font-face {
+  font-family: 'pokemonFont';
+  src: url("../fonts/PokemonSolid.ttf"); }
+
+@font-face {
+  font-family: 'adidasFont';
+  src: url("../fonts/adidasFont.otf"); }
+
+.productos .mostradorProductos div, .nuevaTemporada .galeriaNuevaTemp div, .adulto .contenido .galeriaProductos div, .ninios .contenido .galeriaProductos div {
+  cursor: pointer;
+  background-color: #fffafa;
+  width: 300px;
+  height: 380px;
+  text-align: center;
+  padding: 20px;
+  margin: 10px; }
+
+.productos .mostradorProductos div .descripcion, .nuevaTemporada .galeriaNuevaTemp div .descripcion, .adulto .contenido .galeriaProductos div .descripcion, .ninios .contenido .galeriaProductos div .descripcion {
+  width: auto;
+  text-align: left; }
+
+.productos .mostradorProductos div img, .nuevaTemporada .galeriaNuevaTemp div img, .adulto .contenido .galeriaProductos div img, .ninios .contenido .galeriaProductos div img {
+  width: 150px;
+  height: 170px;
+  padding: 2px; }
+
+.marcas .galeriaMarcas, .productos .mostradorProductos, .novedades, .nuevaTemporada .galeriaNuevaTemp {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.productos, .nuevaTemporada {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Exo", "Cabin", sans-serif;
+  position: relative;
+  padding-bottom: 280px;
+  min-height: 100vh;
+  background: #726eff;
+  background: linear-gradient(180deg, #726eff 0%, #08c6ab 50%, #212b38 100%); }
+
+.opciones .colores a .negro {
+  background-color: black; }
+
+.opciones .colores a .blanco {
+  background-color: white; }
+
+.opciones .colores a .rojo {
+  background-color: red; }
+
+.opciones .colores a .cian {
+  background-color: cyan; }
+
+.opciones .colores a .naranja {
+  background-color: orange; }
+
+.opciones .colores a .plomo {
+  background-color: gray; }
+
+.opcionesDos .estiloBotones div ul li a .negro {
+  background-color: black; }
+
+.opcionesDos .estiloBotones div ul li a .blanco {
+  background-color: white; }
+
+.opcionesDos .estiloBotones div ul li a .rojo {
+  background-color: red; }
+
+.opcionesDos .estiloBotones div ul li a .cian {
+  background-color: cyan; }
+
+.opcionesDos .estiloBotones div ul li a .naranja {
+  background-color: orange; }
+
+.opcionesDos .estiloBotones div ul li a .plomo {
+  background-color: gray; }
+
+header {
+  background-color: #212b38;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding-right: 3%;
+  flex-direction: row;
+  align-items: center;
+  z-index: 10; }
+  header .menuBtn {
+    display: none; }
+  header .checkBtn {
+    cursor: pointer;
+    display: none; }
+    header .checkBtn img {
+      width: 40px;
+      height: 40px; }
+  header a.logo img {
+    width: 130px;
+    height: 130px; }
+  header nav ul {
+    list-style: none; }
+    header nav ul li {
+      display: inline-block;
+      position: relative;
+      padding: 15px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #ffffff; }
+      header nav ul li::after {
+        opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: #ffffff;
+        transition: opacity 500ms, transform 500ms; }
+      header nav ul li:hover {
+        background-color: #1b8996;
+        transition: 500ms;
+        border-radius: 20%; }
+      header nav ul li:hover::after, header nav ul li:focus::after {
+        transform: scale(1); }
+      header nav ul li a {
+        text-decoration: none;
+        color: #ffffff; }
+        header nav ul li a:hover {
+          color: #08c6ab; }
+    header nav ul .dropdown {
+      display: inline;
+      overflow: hidden;
+      cursor: pointer; }
+      header nav ul .dropdown .dropdownContent {
+        display: none;
+        position: fixed;
+        background-color: #ffffff;
+        width: 80%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1; }
+        header nav ul .dropdown .dropdownContent li {
+          float: none;
+          color: #ffffff;
+          padding: 12px 16px;
+          display: block;
+          text-align: left; }
+          header nav ul .dropdown .dropdownContent li a {
+            text-decoration: none; }
+            header nav ul .dropdown .dropdownContent li a img {
+              width: 100px;
+              height: 100px; }
+      header nav ul .dropdown:hover {
+        color: #08c6ab; }
+        header nav ul .dropdown:hover > .dropdownContent {
+          display: flex;
+          justify-content: space-around;
+          background-color: #212b38;
+          width: 80%;
+          left: 10%;
+          transition: 500ms; }
+  header div.adminIconos {
+    padding-right: 10px; }
+    header div.adminIconos a img {
+      width: 30px;
+      height: 30px;
+      padding-right: 5px; }
+
+.hero .carousel-inner img {
+  width: 90%;
+  height: 450px; }
+
+.hero .fontsCarrusel {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold; }
+
+.marcas {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px; }
+  .marcas h2 {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 25px; }
+  .marcas .galeriaMarcas {
+    margin: 10px; }
+    .marcas .galeriaMarcas a {
+      transition: 1s; }
+      .marcas .galeriaMarcas a img {
+        width: 200px;
+        height: 150px; }
+      .marcas .galeriaMarcas a:hover {
+        transform: scale(1.25);
+        transition: 2s; }
+    .marcas .galeriaMarcas .adidasImg img:hover {
+      content: url("../img/adidasBlanco.png"); }
+    .marcas .galeriaMarcas .pumaImg img:hover {
+      content: url("../img/pumaBlanco.png"); }
+    .marcas .galeriaMarcas .nikeImg img:hover {
+      content: url("../img/nikeBlanco.png"); }
+    .marcas .galeriaMarcas .underArmourImg img:hover {
+      content: url("../img/underBlanco.png"); }
+    .marcas .galeriaMarcas .topperImg img:hover {
+      content: url("../img/topperBlanco.png"); }
+
+.productos h2 {
+  padding-bottom: 30px; }
+
+.productos .mostradorProductos div {
+  transition: 300ms; }
+  .productos .mostradorProductos div:hover {
+    border: 1.1px solid;
+    box-shadow: rgba(95, 39, 199, 0.4) 5px 5px, rgba(95, 39, 199, 0.3) 10px 10px, rgba(95, 39, 199, 0.2) 15px 15px, rgba(95, 39, 199, 0.1) 20px 20px, rgba(95, 39, 199, 0.05) 25px 25px;
+    transition: 300ms; }
+
+.novedades {
+  padding: 50px 0; }
+  .novedades .contenedorImgTexto {
+    position: relative;
+    margin: 10px; }
+    .novedades .contenedorImgTexto a .imagenNov {
+      width: 350px;
+      height: 250px;
+      transition: 2s;
+      display: block; }
+      .novedades .contenedorImgTexto a .imagenNov:hover {
+        transform: scale(1.15);
+        opacity: 80%;
+        transition: 2s; }
+    .novedades .contenedorImgTexto .contenedorTexto {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      max-width: 200px;
+      opacity: 0;
+      transition: 1.5s ease;
+      background-color: #37465b; }
+      .novedades .contenedorImgTexto .contenedorTexto .descImg {
+        color: #ffffff;
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center; }
+      .novedades .contenedorImgTexto .contenedorTexto .fontPoke {
+        font-family: "pokemonFont";
+        font-weight: bold;
+        color: #ffffff; }
+      .novedades .contenedorImgTexto .contenedorTexto .fontAdi {
+        font-family: "adidasFont";
+        font-weight: bold;
+        color: #ffffff; }
+    .novedades .contenedorImgTexto:hover .contenedorTexto {
+      opacity: 60%;
+      max-width: 200px; }
+      .novedades .contenedorImgTexto:hover .contenedorTexto .descImg {
+        opacity: 1; }
+    .novedades .contenedorImgTexto:hover .textoRoca {
+      opacity: 70%;
+      max-width: 200px; }
+
+.nuevaTemporada h2 {
+  padding-bottom: 30px; }
+
+.nuevaTemporada .galeriaNuevaTemp div img {
+  transition: 750ms; }
+  .nuevaTemporada .galeriaNuevaTemp div img:hover {
+    transform: scale(1.15); }
+
+.nuevaTemporada .galeriaNuevaTemp div:hover {
+  box-shadow: rgba(221, 235, 235, 0.6) 0px 4px 6px 0px, rgba(248, 252, 252, 0.5) 0px 4px 16px 0px; }
+
+.fixedContact {
+  position: fixed;
+  right: 20px;
+  bottom: 20px; }
+  .fixedContact .whatsapp {
+    width: 40px;
+    height: 40px; }
+
+.opcionesDos {
+  display: none; }
+  .opcionesDos .estiloBotones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #726eff; }
+    .opcionesDos .estiloBotones .btn-group {
+      margin: 5px 10px; }
+    .opcionesDos .estiloBotones div ul li a button {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px; }
+
+.adulto, .ninios {
+  display: inline-flex;
+  width: 100%;
+  height: fit-content; }
+  .adulto .opciones, .ninios .opciones {
+    width: 30%;
+    height: fit-content;
+    color: #ffffff;
+    padding-left: 15px;
+    margin-top: 30px; }
+    .adulto .opciones .opcionesListas ul, .ninios .opciones .opcionesListas ul {
+      list-style: none; }
+      .adulto .opciones .opcionesListas ul li, .ninios .opciones .opcionesListas ul li {
+        margin: 10px; }
+        .adulto .opciones .opcionesListas ul li a, .ninios .opciones .opcionesListas ul li a {
+          text-decoration: none;
+          color: #212b38; }
+          .adulto .opciones .opcionesListas ul li a:hover, .ninios .opciones .opcionesListas ul li a:hover {
+            color: #ffffff; }
+    .adulto .opciones .colores a button, .ninios .opciones .colores a button {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px; }
+    .adulto .opciones .tallas div, .ninios .opciones .tallas div {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border: 1px solid;
+      border-color: #37465b;
+      text-align: center;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      background-color: #37465b; }
+      .adulto .opciones .tallas div a, .ninios .opciones .tallas div a {
+        text-decoration: none;
+        color: #212b38;
+        font-weight: bold;
+        font-size: 20px;
+        color: #fffafa; }
+      .adulto .opciones .tallas div:hover, .ninios .opciones .tallas div:hover {
+        background: #726eff;
+        background: radial-gradient(circle, #212b38 0%, #08c6ab 40%, #726eff 90%); }
+  .adulto .contenido, .ninios .contenido {
+    width: 70%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    .adulto .contenido .galeriaProductos, .ninios .contenido .galeriaProductos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding-top: 40px; }
+      .adulto .contenido .galeriaProductos div, .ninios .contenido .galeriaProductos div {
+        cursor: pointer; }
+        .adulto .contenido .galeriaProductos div img, .ninios .contenido .galeriaProductos div img {
+          transition: 600ms; }
+          .adulto .contenido .galeriaProductos div img:hover, .ninios .contenido .galeriaProductos div img:hover {
+            transform: scale(1.25); }
+        .adulto .contenido .galeriaProductos div h2, .ninios .contenido .galeriaProductos div h2 {
+          font-size: 25px; }
+        .adulto .contenido .galeriaProductos div:hover, .ninios .contenido .galeriaProductos div:hover {
+          box-shadow: rgba(221, 235, 235, 0.6) 0px 4px 6px 0px, rgba(248, 252, 252, 0.5) 0px 4px 16px 0px; }
+
+.acerca {
+  background-image: url("../img/banerNos.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh; }
+  .acerca .descripcionNos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%; }
+    .acerca .descripcionNos div {
+      margin-top: 50px;
+      width: 500px;
+      height: 40vh;
+      margin: 50px 0; }
+      .acerca .descripcionNos div h1 {
+        margin-top: 30px;
+        font-size: 40px; }
+      .acerca .descripcionNos div p {
+        font-size: 20px; }
+    .acerca .descripcionNos iframe {
+      margin-top: 45px;
+      width: 600px;
+      height: 60vh; }
+
+.fondo {
+  background-image: url("../img/builting.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh; }
+  .fondo .elementos {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; }
+    .fondo .elementos h2 {
+      margin-top: 30px; }
+    .fondo .elementos p {
+      margin-top: 30px; }
+    .fondo .elementos a {
+      margin-top: 30px; }
+      .fondo .elementos a button {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+        border: 1px solid #726eff;
+        background-color: #726eff; }
+        .fondo .elementos a button:hover {
+          background-color: #08c6ab; }
+    .fondo .elementos img {
+      margin-top: 30px; }
+
+footer {
+  background-color: #212b38;
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0; }
+  footer .redesSociales a img {
+    width: 50px;
+    height: 50px;
+    line-height: 78px;
+    margin-left: 20px;
+    margin-right: 20px; }
+  footer .enlaces a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 13px;
+    padding-right: 13px;
+    position: relative; }
+    footer .enlaces a::after {
+      content: '';
+      position: absolute;
+      width: 80%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 10%;
+      background-color: #ffffff;
+      transform-origin: center;
+      transition: transform 250ms, opacity 500ms; }
+    footer .enlaces a:hover::after {
+      transform: scaleX(1);
+      transform-origin: center; }
+  footer .derechos {
+    text-decoration: none;
+    color: #ffffff;
+    justify-self: self-end; }
+
+@media screen and (max-width: 1020px) {
+  .marcas .galeriaMarcas a img {
+    width: 120px;
+    height: 120px;
+    margin: 8px 5px; } }
+
+@media screen and (max-width: 946px) {
+  header {
+    display: flex;
+    justify-content: space-evenly; }
+  header .adminIconos {
+    width: 20%; }
+  header .checkBtn {
+    display: block;
+    margin-left: 30px; }
+  header .logo {
+    order: 0;
+    margin-left: 30%; }
+  header nav ul {
+    position: fixed;
+    width: 60%;
+    height: 100vh;
+    top: 130px;
+    left: -100%;
+    text-align: center;
+    transition: 500ms;
+    background-color: #1e152a; }
+  header nav ul .dropdown {
+    display: none; }
+  header nav ul li {
+    display: block;
+    margin: 40px 0;
+    line-height: 30px; }
+  header nav ul li a {
+    font-size: 22px; }
+  header nav ul li:hover {
+    background-color: #00adb5;
+    color: #fffafa; }
+  header #menuBtn:checked ~ nav ul {
+    left: 0; }
+  .opcionesDos {
+    display: block; }
+  .opciones {
+    display: none; }
+  .adulto .contenido, .ninios .contenido {
+    width: 100%; } }
+
+@media screen and (max-width: 830px) {
+  /** MAIN*/
+  .hero .carousel-inner div img {
+    width: 100%;
+    height: 300px; }
+  .marcas .galeriaMarcas img {
+    width: 100px;
+    height: 100px;
+    margin: 8px 5px; }
+  .adulto .contenido .galeriaProductos div h2, .ninios .contenido .galeriaProductos div h2 {
+    font-size: 22px; }
+  /** FIN MAIN*/
+  /** FOOTER*/
+  footer {
+    background-color: #1e152a;
+    text-align: center;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; }
+  footer .redesSociales {
+    order: 3;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 15px 0; }
+  footer .enlaces {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+  footer .derechos {
+    align-self: flex-end; }
+  footer .redesSociales img {
+    margin: 5px 0; }
+  footer .enlaces a {
+    padding: 3px 0; } }
+
+@media screen and (max-width: 660px) {
+  .novedades img {
+    width: 100%;
+    height: auto; }
+  footer {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 50px;
+    grid-template-areas: "footerSocial" "footerLinks" "footerDer"; }
+  footer .redesSociales {
+    grid-area: footerSocial;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap; }
+  footer .redesSociales a img {
+    width: 30px;
+    height: 30px; }
+  footer .enlaces {
+    grid-area: footerLinks;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -5px; }
+  footer .enlaces a {
+    position: relative;
+    margin: 5px 10px;
+    float: right; }
+  footer .enlaces .tallasQuitar {
+    display: none; }
+  footer .derechos {
+    grid-area: footerDer;
+    position: absolute;
+    text-align: center;
+    left: 10%; } }
+
+@media screen and (max-width: 490) {
+  header .logo {
+    order: -1;
+    margin-left: 100px;
+    left: -20px; }
+  header .logo img {
+    width: 50px;
+    height: 50px;
+    left: 0; }
+  header .checkBtn {
+    width: 50px; }
+  header nav {
+    display: none; } }
+
+@media screen and (max-width: 350px) {
+  .novedades a img {
+    width: 250px;
+    height: 250px; }
+  footer .derechos {
+    left: 0%; } }

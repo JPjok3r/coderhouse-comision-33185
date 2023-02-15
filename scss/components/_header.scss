@@ -1,0 +1,124 @@
+header{
+    background-color: nth($colores, 2);
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    padding-right: 3%;
+    flex-direction: row;
+    align-items: center;
+    z-index: 10;
+    .menuBtn{
+        display: none;
+    }
+    .checkBtn{
+
+        cursor: pointer;
+        display: none;
+
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    a.logo{
+
+        img{
+            width: 130px;
+            height: 130px;
+        }
+    }
+    nav{
+
+        ul{
+            list-style: none;
+            li{
+                display: inline-block;
+                position: relative;
+                padding: 15px;
+                font-size: 18px;
+                text-decoration: none;
+                color: nth($colores, 8);
+                &::after{
+                    opacity: 1;
+                    transform: scale(0);
+                    transform-origin: center;
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0.1em;
+                    background-color: nth($colores, 8);
+                    transition: opacity 500ms, transform 500ms;
+                }
+                &:hover{
+                    background-color: nth($colores, 4);
+                    transition: 500ms;
+                    border-radius: 20%;
+                }
+                &:hover::after, &:focus::after{
+                    transform: scale(1);
+                }
+                a{
+                    text-decoration: none;
+                    color: nth($colores, 8);
+                    &:hover{
+                        color: nth($colores, 5);
+                    }
+                }
+            }
+            .dropdown{
+                display: inline;
+                overflow: hidden;
+                cursor: pointer;
+                .dropdownContent{
+                    display: none;
+                    position: fixed;
+                    background-color: nth($colores, 8);
+                    width: 80%;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    li{
+                        float: none;
+                        color: nth($colores, 8);
+                        padding: 12px 16px;
+                        display: block;
+                        text-align: left;
+                        a{
+                            text-decoration: none;
+                            img{
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    color: nth($colores, 5);
+                    > .dropdownContent{
+                        display: flex;
+                        justify-content: space-around;
+                        background-color: nth($colores, 2);
+                        width: 80%;
+                        left: 10%;
+                        transition: 500ms;
+                    }
+                }
+            }
+        }
+    }
+
+    div.adminIconos{
+        padding-right: 10px;
+        a{
+            img{
+                width: 30px;
+                height: 30px;
+                padding-right: 5px;
+            }
+        }
+    }
+}

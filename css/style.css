@@ -14,25 +14,30 @@
 @font-face {
     font-family: 'pokemonFont';
     src: url('../fonts/PokemonSolid.ttf');
-}
+} /* *Realizado */
 
 @font-face {
     font-family: 'adidasFont';
     src: url('../fonts/adidasFont.otf');
-}
+} /* *Realizado */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} /* *Realizado */
 
 body {
     font-family: "Exo", "Cabin", sans-serif;
-    background-color: rgb(218, 218, 218);
-}
+    /* background-color: rgb(218, 218, 218); */
+    position: relative;
+    padding-bottom: 280px;
+    min-height: 100vh;
+    background: rgb(114,110,255);
+    background: linear-gradient(180deg, rgba(114,110,255,1) 0%, rgba(8,198,171,1) 50%, rgba(33,43,56,1) 100%);
+} /* *Realizado */
 
-/*header*/
+/*? header*/
 header {
     background-color: #1e152a;
     width: 100%;
@@ -41,12 +46,12 @@ header {
     justify-content: space-between;
     position: sticky;
     top: 0;
-}
+} /* *Realizado */
 
 header .logo img {
     width: 130px;
     height: 130px;
-}
+} /* *Realizado */
 
 header {
     padding-right: 3%;
@@ -55,36 +60,36 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-}
+} /* *Realizado */
 
 header nav {
     width: 65%;
     align-self: end;
     display: flex;
     justify-content: space-around;
-}
+} /* *Realizado */
 
 header .adminIconos {
     padding-right: 10px;
-}
+} /* *Realizado */
 
 header .adminIconos img {
     width: 30px;
     height: 30px;
     padding-right: 5px;
-}
+} /* *Realizado */
 
-header nav ul,
-.opciones div ul {
+header nav ul, /*! volver a revisar para la class opciones*/
+.opciones .opcionesListas ul {
     list-style: none;
-}
+} /* *Realizado lo del menu*/
 
 header nav ul li {
     display: inline-block;
     position: relative;
     padding: 15px;
     font-size: 18px;
-}
+} /* *Realizado */
 
 header nav ul li::after {
     opacity: 1;
@@ -98,24 +103,24 @@ header nav ul li::after {
     height: 0.1em;
     background-color: rgb(255, 255, 255);
     transition: opacity 500ms, transform 500ms;
-}
+} /* *Realizado */
 
 header nav ul li:hover {
     background-color: #1b8996;
     transition: 500ms;
     border-radius: 20%;
-}
+} /* *Realizado */
 
 header nav ul li:hover::after,
 header nav ul li:focus::after {
     transform: scale(1);
-}
+} /* *Realizado */
 
 header nav ul li a,
 header nav ul li {
     text-decoration: none;
     color: #ffffff;
-}
+} /* *Realizado */
 
 header nav ul .dropdown {
     display: inline;
@@ -127,7 +132,7 @@ header nav ul .dropdown .dropdownContent {
     position: fixed;
     background-color: #f9f9f9;
     width: 80%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
     z-index: 1;
 }
 
@@ -142,6 +147,10 @@ header nav ul .dropdown .dropdownContent li {
 header nav ul .dropdown .dropdownContent li a img {
     width: 100px;
     height: 100px;
+}
+
+header nav ul .dropdown:hover{
+    color: #08c6ab;
 }
 
 header nav ul .dropdown:hover>.dropdownContent {
@@ -170,6 +179,7 @@ header .menuBtn{
 /*header*/
 
 /*main*/
+
 .productoNombre {
     font-size: 24px;
     padding: 2px;
@@ -199,7 +209,7 @@ header .menuBtn{
 }
 
 .marcas {
-    background-color: #00adb5;
+    /* background-color: #00adb5; */
     padding-top: 20px;
     padding-bottom: 30px;
 }
@@ -268,6 +278,12 @@ header .menuBtn{
     height: 450px;
 } 
 
+.hero .fontsCarrusel{
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 /* .hero div p {
     width: 300px;
     justify-self: center;
@@ -302,7 +318,7 @@ header .menuBtn{
 .productos .mostradorProductos div {
     cursor: pointer;
     background-color: #fffafa;
-    width: 200px;
+    width: 300px;
     height: 380px;
     text-align: center;
     padding: 20px;
@@ -313,6 +329,7 @@ header .menuBtn{
     border: 1.1px solid;
     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     box-shadow: rgba(95, 39, 199, 0.4) 5px 5px, rgba(95, 39, 199, 0.3) 10px 10px, rgba(95, 39, 199, 0.2) 15px 15px, rgba(95, 39, 199, 0.1) 20px 20px, rgba(95, 39, 199, 0.05) 25px 25px;
+    transition: 300ms;
 }
 
 .productos .mostradorProductos div img {
@@ -322,7 +339,7 @@ header .menuBtn{
 }
 
 .productos .mostradorProductos div .descripcion {
-    width: 100px;
+    width: auto;
     text-align: left;
 }
 
@@ -427,7 +444,7 @@ header .menuBtn{
 
 .nuevaTemporada .galeriaNuevaTemp div {
     background-color: #fffafa;
-    width: 200px;
+    width: 300px;
     height: 380px;
     padding: 20px;
     margin: 10px;
@@ -435,7 +452,7 @@ header .menuBtn{
 }
 
 .nuevaTemporada .galeriaNuevaTemp div:hover{
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(221, 235, 235, 0.6) 0px 4px 6px 0px, rgba(248, 252, 252, 0.5) 0px 4px 16px 0px;
 }
 
 .contenido .galeriaProductos div {
@@ -462,7 +479,7 @@ header .menuBtn{
 
 .nuevaTemporada .galeriaNuevaTemp div .descripcion,
 .contenido .galeriaProductos div .descripcion {
-    width: 100px;
+    width: auto;
     text-align: left;
 }
 
@@ -484,45 +501,47 @@ header .menuBtn{
     margin: 30px;
 }
 
-.adultoHombre .contenido .galeriaProductos div h2,
+.adulto .contenido .galeriaProductos div h2,
 .ninios .contenido .galeriaProductos div h2{
     font-size: 25px;
 }
 
-.adultoHombre .contenido .galeriaProductos div:hover,
+.adulto .contenido .galeriaProductos div:hover,
 .ninios .contenido .galeriaProductos div:hover{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     cursor: pointer;
 }
 
-.adultoHombre,
+.adulto,
 .ninios {
     display: inline-flex;
     width: 100%;
     height: fit-content;
-    background-color: #eeece2;
+    /* background-color: #eeece2; */
 }
 
-.adultoHombre .opciones,
+.adulto .opciones,
 .ninios .opciones {
     width: 30%;
     height: fit-content;
+    color: #ffffff;
 }
 
-.adultoHombre .contenido,
+.adulto .contenido,
 .ninios .contenido {
     width: 70%;
 }
 
 .opcionesDos{
     display: none;
+    
 }
 
 .opcionesDos .estiloBotones{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #eeece2;
+    background-color: #726eff;
 }
 
 .opcionesDos .estiloBotones .btn-group{
@@ -539,6 +558,11 @@ header .menuBtn{
     color: #1e152a;
 }
 
+.opciones div ul li a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .opciones div ul li {
     margin: 10px;
 }
@@ -550,27 +574,33 @@ header .menuBtn{
     border-radius: 25px;
 }
 
-.opciones .colores a .negro, .opcionesDos .estiloBotones div ul li a .negro {
+.opciones .colores a .negro, 
+.opcionesDos .estiloBotones div ul li a .negro {
     background-color: black;
 }
 
-.opciones .colores a .blanco, .opcionesDos .estiloBotones div ul li a .blanco {
+.opciones .colores a .blanco, 
+.opcionesDos .estiloBotones div ul li a .blanco {
     background-color: white;
 }
 
-.opciones .colores a .rojo, .opcionesDos .estiloBotones div ul li a .rojo {
+.opciones .colores a .rojo, 
+.opcionesDos .estiloBotones div ul li a .rojo {
     background-color: rgb(172, 5, 5);
 }
 
-.opciones .colores a .cian, .opcionesDos .estiloBotones div ul li a .cian {
+.opciones .colores a .cian, 
+.opcionesDos .estiloBotones div ul li a .cian {
     background-color: cyan;
 }
 
-.opciones .colores a .naranja, .opcionesDos .estiloBotones div ul li a .naranja {
+.opciones .colores a .naranja, 
+.opcionesDos .estiloBotones div ul li a .naranja {
     background-color: orange;
 }
 
-.opciones .colores a .plomo, .opcionesDos .estiloBotones div ul li a .plomo {
+.opciones .colores a .plomo, 
+.opcionesDos .estiloBotones div ul li a .plomo {
     background-color: gray;
 }
 
@@ -584,6 +614,7 @@ header .menuBtn{
 .opciones .tallas div {
     width: 50px;
     height: 50px;
+    cursor: pointer;
     border: 1px solid;
     border-color: rgba(92, 189, 144, 0.815);
     text-align: center;
@@ -591,7 +622,16 @@ header .menuBtn{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: rgba(92, 189, 144, 0.815);
+    background-color: #37465b;
+}
+
+.opciones .tallas div:hover {
+    background: rgb(114,110,255);
+    background: radial-gradient(circle, rgba(33,43,56,1) 0%, rgba(8,198,171,1) 40%, rgba(114,110,255,1) 90%);
+}
+
+.opciones .tallas div a{
+    color: #ffffff;
 }
 
 main .acerca {
@@ -600,7 +640,7 @@ main .acerca {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .acerca .descripcionNos {
@@ -615,7 +655,9 @@ main .acerca {
 
 .acerca .descripcionNos div {
     margin-top: 50px;
-    width: 40%;
+    width: 500px;
+    height: 40vh;
+    margin: 50px 0;
 }
 
 .acerca .descripcionNos div h1 {
@@ -629,7 +671,7 @@ main .acerca {
 
 .acerca .descripcionNos iframe {
     margin-top: 45px;
-    width: 50%;
+    width: 600px;
     height: 60vh;
 }
 
@@ -674,31 +716,34 @@ footer {
     background-color: #1e152a;
     text-align: center;
     height: 250px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
-}
+    position: absolute;
+    bottom: 0;
+}/** Revisado Completo*/
 
-footer .redesSociales img {
+footer .redesSociales a img {
     width: 50px;
     height: 50px;
     line-height: 78px;
     margin-left: 20px;
     margin-right: 20px;
-}
+} /** Revisado Completo*/
 
 footer .enlaces a,
 footer p {
     text-decoration: none;
     color: #ffffff;
-}
+} /** Revisado Completo*/
 
 footer .enlaces a {
     padding-left: 13px;
     padding-right: 13px;
     position: relative;
-}
+} /** Revisado Completo*/
 
 footer .enlaces a::after {
     content: '';
@@ -711,16 +756,16 @@ footer .enlaces a::after {
     background-color: #ffffff;
     transform-origin: center;
     transition: transform 250ms, opacity 500ms;
-}
+} /** Revisado Completo*/
 
 footer .enlaces a:hover::after {
     transform: scaleX(1);
     transform-origin: center;
-}
+} /** Revisado Completo*/
 
 footer .derechos {
     justify-self: self-end;
-}
+} /** Revisado Completo*/
 
 /*! MEDIAS Query*/
 
@@ -786,7 +831,7 @@ footer .derechos {
         display: none;
     }
 
-    .adultoHombre .contenido,
+    .adulto .contenido,
     .ninios .contenido{
         width: 100%;
     }
@@ -837,7 +882,7 @@ footer .derechos {
         margin: 8px 5px;
     }
 
-    .adultoHombre .contenido .galeriaProductos div h2,
+    .adulto .contenido .galeriaProductos div h2,
     .ninios .contenido .galeriaProductos div h2{
         font-size: 22px;
     }
